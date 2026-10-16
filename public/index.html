@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ChatGPT Local Archive</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header><h1>ChatGPT Local Archive</h1><p>Everything stays on this computer.</p></header>
+  <main>
+    <section class="search">
+      <input id="q" autofocus placeholder='Search words, phrases, or code (FTS5 syntax supported)'>
+      <select id="project"><option value="">All projects</option></select>
+      <select id="archived"><option value="">Active + archived</option><option value="no">Active only</option><option value="yes">Archived only</option></select>
+      <button id="go">Search</button>
+    </section>
+    <p id="status">Enter a search above.</p>
+    <section id="results"></section>
+    <dialog id="viewer"><button id="close">Close</button><h2 id="title"></h2><pre id="document"></pre></dialog>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

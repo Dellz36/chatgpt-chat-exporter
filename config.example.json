@@ -1,0 +1,18 @@
+{
+  "chatgptUrl": "https://chatgpt.com/",
+  "browserExecutablePath": "",
+  "pageSize": 30,
+  "requestDelayMs": 10000,
+  "maxRetries": 12,
+  "retryBaseMs": 1500,
+  "rateLimitBaseMs": 600000,
+  "rateLimitMaxMs": 600000,
+  "reuseDiscoveryOnResume": true,
+  "headless": false,
+  "endpointTemplates": {
+    "active": ["/backend-api/conversations?offset={offset}&limit={limit}&order=updated&is_archived=false&is_starred=false"],
+    "archived": ["/backend-api/conversations?offset={offset}&limit={limit}&order=updated&is_archived=true"],
+    "projects": ["/backend-api/gizmos/snorlax/sidebar?owned_only=true&conversations_per_gizmo=5&limit=20"],
+    "conversation": ["/backend-api/conversation/{id}"]
+  }
+}

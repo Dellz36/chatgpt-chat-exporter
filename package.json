@@ -1,0 +1,19 @@
+{
+  "name": "chatgpt-chat-exporter",
+  "version": "0.1.0",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "description": "Unofficial local ChatGPT conversation export and searchable archive",
+  "scripts": {
+    "install-browser": "playwright install chromium",
+    "export": "node src/export.js",
+    "serve": "node src/server.js",
+    "test": "node src/self-test.js && node --test tests/*.test.js",
+    "verify": "npm test"
+  },
+  "engines": { "node": ">=24" },
+  "dependencies": {
+    "playwright": "1.62.0"
+  }
+}
